@@ -1,0 +1,14 @@
+family: EB Garamond
+purpose: late-nineteenth-century strategic map labels
+licence: SIL Open Font License 1.1
+source: https://github.com/google/fonts/tree/main/ofl/ebgaramond
+files:
+  regular:
+    path: fonts/EBGaramond-Regular.ttf
+    sha256: ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027
+  italic:
+    path: fonts/EBGaramond-Italic.ttf
+    sha256: bba2c4499c93c9612b90b9825d32b07da52fce2fe57562a1eb6b833553f93c4e
+  licence:
+    path: fonts/EBGaramond-OFL.txt
+    sha256: 0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7

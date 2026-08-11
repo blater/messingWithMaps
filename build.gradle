@@ -1,0 +1,557 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+application {
+    mainClass = 'dn.DesktopLauncher'
+}
+
+sourceSets {
+    mapTools {
+        java.srcDir 'src/mapTools/java'
+        compileClasspath += sourceSets.main.output.classesDirs
+        runtimeClasspath += sourceSets.main.output.classesDirs
+    }
+    main.resources.srcDir layout.buildDirectory.dir('generated-resources/main')
+}
+
+tasks.named('run', JavaExec) {
+    if (System.getProperty('os.name').toLowerCase().contains('mac')) {
+        jvmArgs '-XstartOnFirstThread'
+    }
+    jvmArgs '--enable-native-access=ALL-UNNAMED'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://oss.sonatype.org/content/groups/public' } // libGDX artifacts
+}
+
+dependencies {
+    // Core
+    implementation 'com.badlogicgames.gdx:gdx:1.11.0'
+
+    // Desktop backend (LWJGL3)
+    implementation 'com.badlogicgames.gdx:gdx-backend-lwjgl3:1.11.0'
+    implementation 'com.badlogicgames.gdx:gdx-platform:1.11.0:natives-desktop'
+
+    // Optional: FreeType for custom fonts
+    implementation 'com.badlogicgames.gdx:gdx-freetype:1.11.0'
+    implementation 'com.badlogicgames.gdx:gdx-freetype-platform:1.11.0:natives-desktop'
+
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation files(sourceSets.mapTools.output)
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    mapToolsImplementation 'com.badlogicgames.gdx:gdx:1.11.0'
+    mapToolsImplementation 'org.locationtech.jts:jts-core:1.20.0'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.named('compileMapToolsJava') {
+    dependsOn tasks.named('compileJava')
+}
+
+tasks.named('compileTestJava') {
+    dependsOn tasks.named('mapToolsClasses')
+}
+
+def regionSource = layout.projectDirectory.file(
+    'src/mapTools/resources/maps/natural-earth-strategic-regions.geojson')
+def regionGrouping = layout.projectDirectory.file(
+    'src/mapTools/resources/maps/world-region-groups.tsv')
+def generatedMapAsset = layout.buildDirectory.file('generated-resources/main/maps/strategic_world.map')
+def generatedTopographicReliefDirectory = layout.buildDirectory.dir(
+    'reports/topographic-relief')
+def generatedLabelOrientations = layout.buildDirectory.file(
+    'generated-resources/main/presentation/prepared-label-orientations-1895.tsv')
+def generatedGrandTheatreLabelGlyphs = layout.buildDirectory.file(
+    'prepared-labels/prepared-grand-theatre-label-glyphs.tsv')
+def generatedStrategicLabelLines = layout.buildDirectory.file(
+    'prepared-labels/strategic-label-lines.tsv')
+def generatedStrategicLabelGlyphs = layout.buildDirectory.file(
+    'prepared-labels/prepared-strategic-label-glyphs.tsv')
+def generatedStrategicLabelBaseGlyphs = layout.buildDirectory.file(
+    'prepared-labels/prepared-strategic-label-base-glyphs.tsv')
+def strategicLabelOverrides = layout.projectDirectory.file(
+    'src/main/resources/presentation/label-layout-overrides.tsv')
+def grandTheatreLabelCatalogue = layout.buildDirectory.file(
+    'reports/reference-label-targets/grand-theatre-label-catalogue.tsv')
+def grandTheatreReferenceTargets = layout.buildDirectory.file(
+    'reports/reference-label-targets/grand-theatre-targets.tsv')
+def grandTheatreCandidateLines = layout.buildDirectory.file(
+    'reports/reference-label-layout/grand-theatre-candidate-lines.tsv')
+def grandTheatreCandidateGlyphs = layout.buildDirectory.file(
+    'reports/reference-label-layout/grand-theatre-candidate-glyphs.tsv')
+def grandTheatreCandidatePreview = layout.buildDirectory.file(
+    'reports/reference-label-layout/grand-theatre-candidate-preview.png')
+def grandCandidatePreview = layout.buildDirectory.file(
+    'reports/reference-label-layout/grand-candidate-preview.png')
+def grandTheatreEuropePreview = layout.buildDirectory.file(
+    'reports/reference-label-layout/grand-theatre-europe-preview.png')
+def grandTheatreAsiaPreview = layout.buildDirectory.file(
+    'reports/reference-label-layout/grand-theatre-asia-preview.png')
+def grandTheatreAmericasPreview = layout.buildDirectory.file(
+    'reports/reference-label-layout/grand-theatre-americas-preview.png')
+def grandTheatreIndianPreview = layout.buildDirectory.file(
+    'reports/reference-label-layout/grand-theatre-indian-preview.png')
+
+tasks.register('prepareStrategicMapSource', JavaExec) {
+    group = 'map assets'
+    description = 'Applies the reviewed region policy to local pinned Natural Earth sources.'
+    dependsOn tasks.named('mapToolsClasses')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.NaturalEarthRegionSourceBuilder'
+    maxHeapSize = '2g'
+    args layout.projectDirectory.file(
+            'tmp/map-sources/ne_10m_admin_0_countries.geojson').asFile,
+        layout.projectDirectory.file(
+            'tmp/map-sources/ne_10m_admin_1_states_provinces.geojson').asFile,
+        regionGrouping.asFile,
+        regionSource.asFile
+    inputs.file layout.projectDirectory.file(
+        'tmp/map-sources/ne_10m_admin_0_countries.geojson')
+    inputs.file layout.projectDirectory.file(
+        'tmp/map-sources/ne_10m_admin_1_states_provinces.geojson')
+    inputs.file regionGrouping
+    outputs.file regionSource
+}
+
+tasks.register('generateStrategicMapAsset', JavaExec) {
+    group = 'map assets'
+    description = 'Builds the prepared runtime strategic-map asset.'
+    dependsOn tasks.named('mapToolsClasses')
+    mustRunAfter tasks.named('prepareStrategicMapSource')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.StrategicMapAssetBuilder'
+    maxHeapSize = '2g'
+    args regionSource.asFile, generatedMapAsset.get().asFile
+    inputs.file regionSource
+    outputs.file generatedMapAsset
+}
+
+tasks.register('generateTopographicReliefPreview', JavaExec) {
+    group = 'map assets'
+    description = 'Builds aligned neutral and period-ink Natural Earth relief candidates.'
+    dependsOn tasks.named('mapToolsClasses')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.TopographicReliefAssetBuilder'
+    maxHeapSize = '1g'
+    args layout.projectDirectory.file('tmp/map-sources/MSR_50M/MSR_50M.tif').asFile,
+        regionSource.asFile,
+        generatedTopographicReliefDirectory.get().asFile
+    inputs.files(
+        layout.projectDirectory.file('tmp/map-sources/MSR_50M/MSR_50M.tif'),
+        regionSource)
+    outputs.files(
+        generatedTopographicReliefDirectory.map { it.file('topographic-relief-base.png') },
+        generatedTopographicReliefDirectory.map { it.file('topographic-relief-ink.png') },
+        generatedTopographicReliefDirectory.map {
+            it.file('topographic-relief-alignment-preview.png')
+        })
+}
+
+tasks.register('prepareStrategicLabelOrientations', JavaExec) {
+    group = 'map assets'
+    description = 'Prepares fixed canonical orientations for every strategic-map label.'
+    dependsOn tasks.named('mapToolsClasses')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.LabelOrientationAssetBuilder'
+    args layout.projectDirectory.file('src/main/resources/maps/geographic-labels.tsv').asFile,
+        layout.projectDirectory.file('src/main/resources/maps/places-1895.tsv').asFile,
+        layout.projectDirectory.file('src/main/resources/presentation/political-labels-1895.tsv').asFile,
+        layout.projectDirectory.file('src/main/resources/presentation/label-orientation-overrides-1895.tsv').asFile,
+        generatedLabelOrientations.get().asFile
+    inputs.files(
+        layout.projectDirectory.file('src/main/resources/maps/geographic-labels.tsv'),
+        layout.projectDirectory.file('src/main/resources/maps/places-1895.tsv'),
+        layout.projectDirectory.file('src/main/resources/presentation/political-labels-1895.tsv'),
+        layout.projectDirectory.file('src/main/resources/presentation/label-orientation-overrides-1895.tsv'))
+    outputs.file generatedLabelOrientations
+}
+
+tasks.register('prepareStrategicGrandTheatreLabelGlyphs', JavaExec) {
+    group = 'map assets'
+    description = 'Shapes reviewed GRAND/THEATRE labels into fixed period map-space glyphs.'
+    dependsOn tasks.named('mapToolsClasses')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.PreparedLabelGlyphAssetBuilder'
+    args layout.projectDirectory.file(
+            'src/mapTools/resources/labels/grand-theatre-label-lines.tsv').asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf').asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf').asFile,
+        generatedGrandTheatreLabelGlyphs.get().asFile,
+        strategicLabelOverrides.asFile
+    inputs.files(
+        layout.projectDirectory.file(
+            'src/mapTools/resources/labels/grand-theatre-label-lines.tsv'),
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf'),
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf'),
+        strategicLabelOverrides)
+    outputs.file generatedGrandTheatreLabelGlyphs
+}
+
+tasks.register('prepareStrategicGrandTheatreBaseGlyphs', JavaExec) {
+    group = 'map assets'
+    description = 'Shapes immutable unadjusted GRAND/THEATRE base glyph coordinates.'
+    dependsOn tasks.named('mapToolsClasses')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.PreparedLabelGlyphAssetBuilder'
+    args layout.projectDirectory.file(
+            'src/mapTools/resources/labels/grand-theatre-label-lines.tsv').asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf').asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf').asFile,
+        layout.buildDirectory.file(
+            'prepared-labels/prepared-grand-theatre-base-glyphs.tsv').get().asFile
+    inputs.files(
+        layout.projectDirectory.file(
+            'src/mapTools/resources/labels/grand-theatre-label-lines.tsv'),
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf'),
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf'))
+    outputs.file layout.buildDirectory.file(
+        'prepared-labels/prepared-grand-theatre-base-glyphs.tsv')
+}
+
+tasks.register('prepareStrategicLabelLines', JavaExec) {
+    group = 'map assets'
+    description = 'Prepares fixed baseline geometry for all seven cumulative label bands.'
+    dependsOn tasks.named('mapToolsClasses')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.StrategicLabelLineAssetBuilder'
+    args layout.projectDirectory.file(
+            'src/mapTools/resources/labels/grand-theatre-label-lines.tsv').asFile,
+        layout.projectDirectory.file('src/main/resources/maps/geographic-labels.tsv').asFile,
+        layout.projectDirectory.file('src/main/resources/maps/places-1895.tsv').asFile,
+        layout.projectDirectory.file(
+            'src/main/resources/presentation/political-labels-1895.tsv').asFile,
+        layout.projectDirectory.file('src/main/resources/politics/actors-1895.tsv').asFile,
+        layout.projectDirectory.file('src/main/resources/politics/dependencies-1895.tsv').asFile,
+        layout.projectDirectory.file(
+            'src/main/resources/presentation/label-orientation-overrides-1895.tsv').asFile,
+        generatedStrategicLabelLines.get().asFile
+    inputs.files(
+        layout.projectDirectory.file(
+            'src/mapTools/resources/labels/grand-theatre-label-lines.tsv'),
+        layout.projectDirectory.file('src/main/resources/maps/geographic-labels.tsv'),
+        layout.projectDirectory.file('src/main/resources/maps/places-1895.tsv'),
+        layout.projectDirectory.file(
+            'src/main/resources/presentation/political-labels-1895.tsv'),
+        layout.projectDirectory.file('src/main/resources/politics/actors-1895.tsv'),
+        layout.projectDirectory.file('src/main/resources/politics/dependencies-1895.tsv'),
+        layout.projectDirectory.file(
+            'src/main/resources/presentation/label-orientation-overrides-1895.tsv'))
+    outputs.file generatedStrategicLabelLines
+}
+
+tasks.register('prepareStrategicLabelGlyphs', JavaExec) {
+    group = 'map assets'
+    description = 'Shapes every cumulative strategic-label layer into fixed runtime glyphs.'
+    dependsOn tasks.named('prepareStrategicLabelLines')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.PreparedLabelGlyphAssetBuilder'
+    args generatedStrategicLabelLines.get().asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf').asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf').asFile,
+        generatedStrategicLabelGlyphs.get().asFile,
+        strategicLabelOverrides.asFile
+    inputs.files(
+        generatedStrategicLabelLines,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf'),
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf'),
+        strategicLabelOverrides)
+    outputs.file generatedStrategicLabelGlyphs
+}
+
+tasks.register('prepareStrategicLabelBaseGlyphs', JavaExec) {
+    group = 'map assets'
+    description = 'Shapes the immutable unadjusted base for every strategic-label layer.'
+    dependsOn tasks.named('prepareStrategicLabelLines')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.PreparedLabelGlyphAssetBuilder'
+    args generatedStrategicLabelLines.get().asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf').asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf').asFile,
+        generatedStrategicLabelBaseGlyphs.get().asFile
+    inputs.files(
+        generatedStrategicLabelLines,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf'),
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf'))
+    outputs.file generatedStrategicLabelBaseGlyphs
+}
+
+tasks.register('prepareGrandTheatreReferenceTargets', JavaExec) {
+    group = 'map assets'
+    description = 'Builds the catalogue-derived GRAND/THEATRE reference-label target set.'
+    dependsOn tasks.named('mapToolsClasses')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.GrandTheatreReferenceTargetBuilder'
+    def referenceMap = providers.gradleProperty('referenceMap')
+    inputs.files(
+        layout.projectDirectory.file(
+            'src/mapTools/resources/labels/philip-1905-calibration.tsv'),
+        layout.projectDirectory.file('src/main/resources/maps/geographic-labels.tsv'),
+        layout.projectDirectory.file(
+            'src/main/resources/presentation/political-labels-1895.tsv'),
+        layout.projectDirectory.file('src/main/resources/politics/actors-1895.tsv'),
+        layout.projectDirectory.file(
+            'src/mapTools/resources/labels/display-label-extraction-targets.tsv'))
+    if (referenceMap.isPresent()) {
+        inputs.file(file(referenceMap.get()))
+    }
+    outputs.files grandTheatreLabelCatalogue, grandTheatreReferenceTargets
+    doFirst {
+        if (!referenceMap.isPresent()) {
+            throw new GradleException(
+                'Supply the uncommitted reference scan with -PreferenceMap=/absolute/path/image.jpg')
+        }
+        args referenceMap.get(),
+            layout.projectDirectory.file(
+                'src/mapTools/resources/labels/philip-1905-calibration.tsv').asFile,
+            layout.projectDirectory.file('src/main/resources/maps/geographic-labels.tsv').asFile,
+            layout.projectDirectory.file(
+                'src/main/resources/presentation/political-labels-1895.tsv').asFile,
+            layout.projectDirectory.file('src/main/resources/politics/actors-1895.tsv').asFile,
+            layout.projectDirectory.file(
+                'src/mapTools/resources/labels/display-label-extraction-targets.tsv').asFile,
+            grandTheatreLabelCatalogue.get().asFile,
+            grandTheatreReferenceTargets.get().asFile
+    }
+}
+
+tasks.register('extractReferenceDisplayLabels', JavaExec) {
+    group = 'map assets'
+    description = 'Builds local review evidence for widely tracked reference-map labels.'
+    dependsOn tasks.named('mapToolsClasses')
+    dependsOn tasks.named('prepareGrandTheatreReferenceTargets')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.ReferenceDisplayLabelExtractor'
+    maxHeapSize = '2g'
+    def referenceMap = providers.gradleProperty('referenceMap')
+    inputs.files(
+        layout.projectDirectory.file(
+            'src/mapTools/resources/labels/philip-1905-calibration.tsv'),
+        grandTheatreReferenceTargets)
+    if (referenceMap.isPresent()) {
+        inputs.file(file(referenceMap.get()))
+    }
+    outputs.dir layout.buildDirectory.dir('reports/reference-label-extraction')
+    doFirst {
+        if (!referenceMap.isPresent()) {
+            throw new GradleException(
+                'Supply the uncommitted reference scan with -PreferenceMap=/absolute/path/image.jpg')
+        }
+        args referenceMap.get(),
+            layout.projectDirectory.file(
+                'src/mapTools/resources/labels/philip-1905-calibration.tsv').asFile,
+            grandTheatreReferenceTargets.get().asFile,
+            layout.buildDirectory.dir('reports/reference-label-extraction').get().asFile
+    }
+}
+
+tasks.register('runReferenceDisplayLabelOcr', Exec) {
+    group = 'map assets'
+    description = 'Runs local PaddleOCR and merges it with display-label fallback evidence.'
+    dependsOn tasks.named('extractReferenceDisplayLabels')
+    def referenceMap = providers.gradleProperty('referenceMap')
+    def paddleOcrPython = providers.gradleProperty('paddleOcrPython')
+    inputs.files(
+        layout.projectDirectory.file('src/mapTools/python/reference_label_ocr.py'),
+        grandTheatreReferenceTargets,
+        layout.buildDirectory.file(
+            'reports/reference-label-extraction/display-label-candidates.tsv'))
+    if (referenceMap.isPresent()) {
+        inputs.file(file(referenceMap.get()))
+    }
+    outputs.dir layout.buildDirectory.dir('reports/reference-label-ocr')
+    doFirst {
+        if (!referenceMap.isPresent()) {
+            throw new GradleException(
+                'Supply the uncommitted reference scan with -PreferenceMap=/absolute/path/image.jpg')
+        }
+        if (!paddleOcrPython.isPresent()) {
+            throw new GradleException(
+                'Supply a PaddleOCR Python executable with -PpaddleOcrPython=/absolute/path/python')
+        }
+        commandLine paddleOcrPython.get(),
+            layout.projectDirectory.file(
+                'src/mapTools/python/reference_label_ocr.py').asFile,
+            referenceMap.get(),
+            grandTheatreReferenceTargets.get().asFile,
+            layout.buildDirectory.file(
+                'reports/reference-label-extraction/display-label-candidates.tsv').get().asFile,
+            layout.buildDirectory.dir('reports/reference-label-ocr').get().asFile
+    }
+}
+
+tasks.register('compileGrandTheatreCandidateLayout', JavaExec) {
+    group = 'map assets'
+    description = 'Compiles located reference evidence and explicit absent-title fallbacks for review.'
+    dependsOn tasks.named('runReferenceDisplayLabelOcr')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.GrandTheatreCandidateLayoutBuilder'
+    args layout.projectDirectory.file(
+            'src/mapTools/resources/labels/philip-1905-calibration.tsv').asFile,
+        grandTheatreLabelCatalogue.get().asFile,
+        layout.buildDirectory.file(
+            'reports/reference-label-ocr/ocr-extraction-report.tsv').get().asFile,
+        layout.projectDirectory.file(
+            'src/mapTools/resources/labels/grand-theatre-layout-fallbacks.tsv').asFile,
+        grandTheatreCandidateLines.get().asFile
+    inputs.files(
+        layout.projectDirectory.file(
+            'src/mapTools/resources/labels/philip-1905-calibration.tsv'),
+        grandTheatreLabelCatalogue,
+        layout.buildDirectory.file(
+            'reports/reference-label-ocr/ocr-extraction-report.tsv'),
+        layout.projectDirectory.file(
+            'src/mapTools/resources/labels/grand-theatre-layout-fallbacks.tsv'))
+    outputs.file grandTheatreCandidateLines
+}
+
+tasks.register('prepareGrandTheatreCandidateGlyphs', JavaExec) {
+    group = 'map assets'
+    description = 'Shapes the GRAND/THEATRE review candidate with the bundled period typefaces.'
+    dependsOn tasks.named('compileGrandTheatreCandidateLayout')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.PreparedLabelGlyphAssetBuilder'
+    args grandTheatreCandidateLines.get().asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf').asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf').asFile,
+        grandTheatreCandidateGlyphs.get().asFile
+    inputs.files(
+        grandTheatreCandidateLines,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf'),
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf'))
+    outputs.file grandTheatreCandidateGlyphs
+}
+
+tasks.register('previewGrandTheatreCandidateGlyphs', JavaExec) {
+    group = 'map assets'
+    description = 'Renders the exact shaped GRAND/THEATRE candidate for visual review.'
+    dependsOn tasks.named('prepareGrandTheatreCandidateGlyphs')
+    dependsOn tasks.named('generateStrategicMapAsset')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.PreparedLabelGlyphPreviewBuilder'
+    args grandTheatreCandidateGlyphs.get().asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf').asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf').asFile,
+        grandTheatreCandidatePreview.get().asFile,
+        grandTheatreLabelCatalogue.get().asFile,
+        'THEATRE',
+        generatedMapAsset.get().asFile
+    inputs.files(
+        grandTheatreCandidateGlyphs,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf'),
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf'),
+        grandTheatreLabelCatalogue,
+        generatedMapAsset)
+    outputs.file grandTheatreCandidatePreview
+}
+
+tasks.register('previewGrandCandidateGlyphs', JavaExec) {
+    group = 'map assets'
+    description = 'Renders only the cumulative GRAND candidate for visual review.'
+    dependsOn tasks.named('prepareGrandTheatreCandidateGlyphs')
+    dependsOn tasks.named('generateStrategicMapAsset')
+    classpath = sourceSets.mapTools.runtimeClasspath
+    mainClass = 'dn.strategicmap.pipeline.PreparedLabelGlyphPreviewBuilder'
+    args grandTheatreCandidateGlyphs.get().asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf').asFile,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf').asFile,
+        grandCandidatePreview.get().asFile,
+        grandTheatreLabelCatalogue.get().asFile,
+        'GRAND',
+        generatedMapAsset.get().asFile
+    inputs.files(
+        grandTheatreCandidateGlyphs,
+        grandTheatreLabelCatalogue,
+        generatedMapAsset,
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf'),
+        layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf'))
+    outputs.file grandCandidatePreview
+}
+
+def registerGrandTheatreRegionalPreview = { taskName, descriptionText, output,
+                                             west, south, east, north ->
+    tasks.register(taskName, JavaExec) {
+        group = 'map assets'
+        description = descriptionText
+        dependsOn tasks.named('prepareGrandTheatreCandidateGlyphs')
+        dependsOn tasks.named('generateStrategicMapAsset')
+        classpath = sourceSets.mapTools.runtimeClasspath
+        mainClass = 'dn.strategicmap.pipeline.PreparedLabelGlyphPreviewBuilder'
+        args grandTheatreCandidateGlyphs.get().asFile,
+            layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf').asFile,
+            layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf').asFile,
+            output.get().asFile,
+            grandTheatreLabelCatalogue.get().asFile,
+            'THEATRE',
+            generatedMapAsset.get().asFile,
+            west, south, east, north
+        inputs.files(
+            grandTheatreCandidateGlyphs,
+            grandTheatreLabelCatalogue,
+            generatedMapAsset,
+            layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Regular.ttf'),
+            layout.projectDirectory.file('src/main/resources/fonts/EBGaramond-Italic.ttf'))
+        outputs.file output
+    }
+}
+
+registerGrandTheatreRegionalPreview(
+    'previewGrandTheatreEuropeCandidateGlyphs',
+    'Renders the GRAND/THEATRE Europe review crop against map geometry.',
+    grandTheatreEuropePreview, -20.0, 25.0, 60.0, 75.0)
+registerGrandTheatreRegionalPreview(
+    'previewGrandTheatreAsiaCandidateGlyphs',
+    'Renders the GRAND/THEATRE Asia review crop against map geometry.',
+    grandTheatreAsiaPreview, 40.0, -10.0, 180.0, 82.0)
+registerGrandTheatreRegionalPreview(
+    'previewGrandTheatreAmericasCandidateGlyphs',
+    'Renders the GRAND/THEATRE Americas review crop against map geometry.',
+    grandTheatreAmericasPreview, -180.0, -65.0, -30.0, 82.0)
+registerGrandTheatreRegionalPreview(
+    'previewGrandTheatreIndianCandidateGlyphs',
+    'Renders the GRAND/THEATRE Indian Ocean and Australasia review crop against map geometry.',
+    grandTheatreIndianPreview, 25.0, -65.0, 180.0, 35.0)
+
+tasks.named('processResources') {
+    dependsOn tasks.named('generateStrategicMapAsset')
+    dependsOn tasks.named('prepareStrategicLabelOrientations')
+    inputs.file generatedMapAsset
+    exclude 'maps/world_1880.geojson'
+    exclude 'maps/world_1880-regions.tsv'
+    exclude 'maps/world_1880.source.yml'
+}
+
+def skipStrategicLabelGeneration = providers.gradleProperty('skipStrategicLabelGeneration')
+    .map { it.toBoolean() }.orElse(false)
+
+if (!skipStrategicLabelGeneration.get()) {
+    tasks.named('processResources') {
+        dependsOn tasks.named('prepareStrategicLabelGlyphs')
+        dependsOn tasks.named('prepareStrategicLabelBaseGlyphs')
+        inputs.files generatedStrategicLabelGlyphs, generatedStrategicLabelBaseGlyphs
+        doLast {
+            copy {
+                from generatedStrategicLabelGlyphs
+                from generatedStrategicLabelBaseGlyphs
+                into layout.buildDirectory.dir('resources/main/presentation')
+            }
+        }
+    }
+}

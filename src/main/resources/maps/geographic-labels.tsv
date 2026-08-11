@@ -1,0 +1,90 @@
+labelId	name	kind	latitude	longitude	rank	sourceDatasetId
+water.atlantic	Atlantic Ocean	OCEAN	10.0	-32.0	GLOBAL	curated-natural-earth-physical-5.1
+water.north-atlantic	North Atlantic Ocean	OCEAN	38.0	-38.0	GRAND	curated-natural-earth-physical-5.1
+water.south-atlantic	South Atlantic Ocean	OCEAN	-30.0	-20.0	GRAND	curated-natural-earth-physical-5.1
+water.pacific-west	Pacific Ocean	OCEAN	5.0	155.0	GLOBAL	curated-natural-earth-physical-5.1
+water.pacific-east	Pacific Ocean	OCEAN	-8.0	-130.0	GLOBAL	curated-natural-earth-physical-5.1
+water.indian	Indian Ocean	OCEAN	-20.0	80.0	GLOBAL	curated-natural-earth-physical-5.1
+water.mediterranean	Mediterranean Sea	SEA	35.0	18.0	GRAND	curated-natural-earth-physical-5.1
+water.north-sea	North Sea	SEA	56.0	3.0	MAJOR	curated-natural-earth-physical-5.1
+islands.caribbean	Caribbean	ISLAND_GROUP	18.0	-68.0	MAJOR	curated-natural-earth-physical-5.1
+water.arctic	Arctic Ocean	OCEAN	77.0	0.0	GLOBAL	curated-natural-earth-physical-5.1
+water.southern	Southern Ocean	OCEAN	-58.0	20.0	GLOBAL	curated-natural-earth-physical-5.1
+water.baltic	Baltic Sea	SEA	58.0	19.0	MAJOR	curated-natural-earth-physical-5.1
+water.norwegian	Norwegian Sea	SEA	67.0	3.0	MAJOR	curated-natural-earth-physical-5.1
+water.barents	Barents Sea	SEA	73.0	38.0	SECONDARY	curated-natural-earth-physical-5.1
+water.white	White Sea	SEA	65.5	37.0	DETAIL	curated-natural-earth-physical-5.1
+water.black	Black Sea	SEA	43.0	34.0	MAJOR	curated-natural-earth-physical-5.1
+water.caspian	Caspian Sea	SEA	42.0	51.0	MAJOR	curated-natural-earth-physical-5.1
+water.red	Red Sea	SEA	20.0	38.5	MAJOR	curated-natural-earth-physical-5.1
+water.persian-gulf	Persian Gulf	SEA	26.0	52.0	SECONDARY	curated-natural-earth-physical-5.1
+water.arabian	Arabian Sea	SEA	14.0	64.0	MAJOR	curated-natural-earth-physical-5.1
+water.bay-of-bengal	Bay of Bengal	SEA	14.0	88.0	MAJOR	curated-natural-earth-physical-5.1
+water.andaman	Andaman Sea	SEA	10.0	96.0	SECONDARY	curated-natural-earth-physical-5.1
+water.south-china	China Sea	SEA	13.0	114.0	MAJOR	curated-natural-earth-physical-5.1
+water.east-china	East China Sea	SEA	29.0	126.0	SECONDARY	curated-natural-earth-physical-5.1
+water.yellow	Yellow Sea	SEA	35.0	123.0	SECONDARY	curated-natural-earth-physical-5.1
+water.japan	Sea of Japan	SEA	40.0	135.0	MAJOR	curated-natural-earth-physical-5.1
+water.okhotsk	Sea of Okhotsk	SEA	53.0	150.0	SECONDARY	curated-natural-earth-physical-5.1
+water.bering	Bering Sea	SEA	58.0	-175.0	MAJOR	curated-natural-earth-physical-5.1
+water.philippine	Philippine Sea	SEA	20.0	133.0	SECONDARY	curated-natural-earth-physical-5.1
+water.coral	Coral Sea	SEA	-18.0	154.0	MAJOR	curated-natural-earth-physical-5.1
+water.tasman	Tasman Sea	SEA	-39.0	160.0	MAJOR	curated-natural-earth-physical-5.1
+water.java	Java Sea	SEA	-5.0	112.0	SECONDARY	curated-natural-earth-physical-5.1
+water.banda	Banda Sea	SEA	-5.5	127.0	DETAIL	curated-natural-earth-physical-5.1
+water.celebes	Celebes Sea	SEA	4.0	122.0	DETAIL	curated-natural-earth-physical-5.1
+water.sulu	Sulu Sea	SEA	8.0	120.0	DETAIL	curated-natural-earth-physical-5.1
+water.gulf-of-mexico	Gulf of Mexico	SEA	24.0	-90.0	MAJOR	curated-natural-earth-physical-5.1
+water.caribbean	Caribbean Sea	SEA	15.0	-76.0	MAJOR	curated-natural-earth-physical-5.1
+water.hudson-bay	Hudson Bay	SEA	59.0	-84.0	MAJOR	curated-natural-earth-physical-5.1
+water.labrador	Labrador Sea	SEA	58.0	-54.0	SECONDARY	curated-natural-earth-physical-5.1
+water.gulf-st-lawrence	Gulf of St Lawrence	SEA	48.0	-62.0	DETAIL	curated-natural-earth-physical-5.1
+water.english-channel	English Channel	SEA	50.0	-1.5	SECONDARY	curated-natural-earth-physical-5.1
+water.irish	Irish Sea	SEA	53.5	-5.0	DETAIL	curated-natural-earth-physical-5.1
+water.biscay	Bay of Biscay	SEA	45.0	-6.0	SECONDARY	curated-natural-earth-physical-5.1
+water.adriatic	Adriatic Sea	SEA	43.0	15.0	SECONDARY	curated-natural-earth-physical-5.1
+water.aegean	Aegean Sea	SEA	38.0	25.0	SECONDARY	curated-natural-earth-physical-5.1
+water.tyrrhenian	Tyrrhenian Sea	SEA	40.0	12.0	DETAIL	curated-natural-earth-physical-5.1
+water.ionian	Ionian Sea	SEA	37.0	19.0	DETAIL	curated-natural-earth-physical-5.1
+water.marmara	Sea of Marmara	SEA	40.7	28.0	DETAIL	curated-natural-earth-physical-5.1
+water.gulf-of-guinea	Gulf of Guinea	SEA	1.0	3.0	MAJOR	curated-natural-earth-physical-5.1
+water.mozambique-channel	Mozambique Channel	SEA	-18.0	41.0	SECONDARY	curated-natural-earth-physical-5.1
+water.drake	Drake Passage	SEA	-57.0	-66.0	SECONDARY	curated-natural-earth-physical-5.1
+water.rio-de-la-plata	Rio de la Plata	SEA	-35.0	-56.0	LOCAL	curated-natural-earth-physical-5.1
+islands.british-isles	British Isles	ISLAND_GROUP	55.0	-6.0	NATIONAL	curated-natural-earth-physical-5.1
+islands.azores	Azores	ISLAND_GROUP	38.5	-28.0	SECONDARY	curated-natural-earth-physical-5.1
+islands.canaries	Canary Islands	ISLAND_GROUP	28.2	-15.5	SECONDARY	curated-natural-earth-physical-5.1
+islands.cape-verde	Cape Verde Islands	ISLAND_GROUP	16.0	-24.0	SECONDARY	curated-natural-earth-physical-5.1
+islands.falklands	Falkland Islands	ISLAND_GROUP	-51.7	-59.0	SECONDARY	curated-natural-earth-physical-5.1
+islands.aleutians	Aleutian Islands	ISLAND_GROUP	52.0	-170.0	SECONDARY	curated-natural-earth-physical-5.1
+islands.hawaii	Hawaiian Islands	ISLAND_GROUP	20.5	-157.0	NATIONAL	curated-natural-earth-physical-5.1
+islands.japan	Japanese Islands	ISLAND_GROUP	36.5	139.0	NATIONAL	curated-natural-earth-physical-5.1
+islands.philippines	Philippine Islands	ISLAND_GROUP	12.5	122.0	NATIONAL	curated-natural-earth-physical-5.1
+islands.east-indies	East Indies	ISLAND_GROUP	-2.0	118.0	NATIONAL	curated-natural-earth-physical-5.1
+islands.new-guinea	New Guinea	ISLAND	-5.0	141.0	NATIONAL	curated-natural-earth-physical-5.1
+islands.bismarck	Bismarck Archipelago	ISLAND_GROUP	-4.5	151.5	DETAIL	curated-natural-earth-physical-5.1
+islands.solomons	Solomon Islands	ISLAND_GROUP	-9.0	159.0	SECONDARY	curated-natural-earth-physical-5.1
+islands.new-zealand	New Zealand	ISLAND_GROUP	-42.0	173.0	NATIONAL	curated-natural-earth-physical-5.1
+islands.madagascar	Madagascar	ISLAND	-20.0	47.0	NATIONAL	curated-natural-earth-physical-5.1
+islands.marianas	Mariana Islands	ISLAND_GROUP	16.0	145.0	DETAIL	curated-natural-earth-physical-5.1
+islands.carolines	Caroline Islands	ISLAND_GROUP	7.0	151.0	SECONDARY	curated-natural-earth-physical-5.1
+islands.marshalls	Marshall Islands	ISLAND_GROUP	8.0	168.0	SECONDARY	curated-natural-earth-physical-5.1
+islands.fiji	Fiji Islands	ISLAND_GROUP	-17.8	178.0	SECONDARY	curated-natural-earth-physical-5.1
+islands.samoa	Samoan Islands	ISLAND_GROUP	-13.8	-172.0	DETAIL	curated-natural-earth-physical-5.1
+islands.tonga	Tonga Islands	ISLAND_GROUP	-20.0	-175.0	DETAIL	curated-natural-earth-physical-5.1
+islands.greater-antilles	Greater Antilles	ISLAND_GROUP	20.0	-76.0	SECONDARY	curated-natural-earth-physical-5.1
+islands.lesser-antilles	Lesser Antilles	ISLAND_GROUP	15.0	-61.5	SECONDARY	curated-natural-earth-physical-5.1
+islands.bermuda	Bermuda	ISLAND_GROUP	32.3	-64.8	DETAIL	curated-natural-earth-physical-5.1
+islands.seychelles	Seychelles	ISLAND_GROUP	-4.5	55.5	DETAIL	curated-natural-earth-physical-5.1
+islands.maldives	Maldives	ISLAND_GROUP	3.2	73.2	SECONDARY	curated-natural-earth-physical-5.1
+islands.andamans	Andaman and Nicobar Islands	ISLAND_GROUP	10.5	92.5	SECONDARY	curated-natural-earth-physical-5.1
+region.sahara	Sahara	REGION	24.0	12.0	MAJOR	curated-natural-earth-physical-5.1
+region.siberia	Siberia	REGION	61.0	95.0	MAJOR	curated-natural-earth-physical-5.1
+continent.north-america	North America	REGION	47.0	-105.0	GLOBAL	curated-natural-earth-physical-5.1
+continent.south-america	South America	REGION	-17.0	-61.0	GLOBAL	curated-natural-earth-physical-5.1
+continent.europe	Europe	REGION	53.0	22.0	GLOBAL	curated-natural-earth-physical-5.1
+continent.africa	Africa	REGION	7.0	20.0	GLOBAL	curated-natural-earth-physical-5.1
+continent.asia	Asia	REGION	47.0	92.0	GLOBAL	curated-natural-earth-physical-5.1
+continent.australia	Australia	REGION	-25.0	134.0	GLOBAL	curated-natural-earth-physical-5.1
+region.central-asia	Central Asia	REGION	43.0	67.0	SECONDARY	curated-natural-earth-physical-5.1
+region.patagonia	Patagonia	REGION	-46.0	-69.0	SECONDARY	curated-natural-earth-physical-5.1

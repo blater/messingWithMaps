@@ -1,0 +1,26 @@
+dataset: Drednort Natural Earth period-ink topographic relief
+represented_date: modern physical relief styled as a late nineteenth-century engraved map
+licence: public-domain Natural Earth source with project-authored deterministic styling
+source:
+  dataset: Natural Earth Manual Shaded Relief 1:50m
+  version: 3.3.0
+  reference_relief: SRTM Plus
+  terms: https://www.naturalearthdata.com/about/terms-of-use/
+  archive: MSR_50M.zip
+  archive_sha256: e38f8b256f64eccae250a1e482761d4a7a585e6602c941e6bdb860e160faf609
+  raster: MSR_50M/MSR_50M.tif
+  raster_dimensions: 10800x5400
+  projection: WGS84 geographic, 0.03333333333333 degrees per pixel
+production_artifact: src/main/resources/maps/topographic-relief.png
+transformation_history:
+  - resample the registered global raster to an exact 2048x1024 equirectangular texture
+  - normalize the flat-water tone into a restrained terrain modulation range
+  - extract multi-scale terrain edges from the registered relief without moving pixels
+  - draw deterministic, locally aligned short hachures inside an eroded strategic-land mask
+  - omit baked coastlines, boundaries, labels, graticules, and paper decoration
+asset_builder: dn.strategicmap.pipeline.TopographicReliefAssetBuilder
+runtime_registration:
+  longitude_degrees: -180 to 180
+  latitude_degrees: 90 to -90
+  transform: direct canonical map coordinates; no offset, scale, or warp
+political_interpretation: none; region geometry clips the relief and political colour is applied separately

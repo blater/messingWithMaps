@@ -1,0 +1,246 @@
+placeId	name	latitude	longitude	kinds	rank	regionId	sourceDatasetId	cityStanding
+place.london	London	51.501941	-0.118668	CITY,PORT	GLOBAL	gbr-england-wales	curated-natural-earth-populated-places-5.1.2	IMPERIAL_CAPITAL
+place.portsmouth	Portsmouth	50.800348	-1.080022	PORT	MAJOR	gbr-england-wales	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.liverpool	Liverpool	53.405068	-2.961934	CITY,PORT	MAJOR	gbr-england-wales	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.glasgow	Glasgow	55.86227	-4.239101	CITY,PORT	MAJOR	gbr-scotland	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.paris	Paris	48.858092	2.352992	CITY	GLOBAL	fra-north	curated-natural-earth-populated-places-5.1.2	IMPERIAL_CAPITAL
+place.brest	Brest	48.390443	-4.495008	PORT	MAJOR	fra-west	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.marseilles	Marseilles	43.291925	5.373064	CITY,PORT	MAJOR	fra-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.bordeaux	Bordeaux	44.851959	-0.596959	CITY,PORT	SECONDARY	fra-west	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.berlin	Berlin	52.523764	13.399603	CITY	GLOBAL	deu-northeast	curated-natural-earth-populated-places-5.1.2	IMPERIAL_CAPITAL
+place.hamburg	Hamburg	53.551971	9.998053	CITY,PORT	MAJOR	deu-northeast	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.kiel	Kiel	54.33039	10.130017	PORT	MAJOR	deu-northeast	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.vienna	Vienna	48.201961	16.364693	CITY	GLOBAL	AUT	curated-natural-earth-populated-places-5.1.2	IMPERIAL_CAPITAL
+place.budapest	Budapest	47.501952	19.081375	CITY	MAJOR	HUN	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.trieste	Trieste	45.650378	13.800026	CITY,PORT	MAJOR	ita-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.prague	Prague	50.086967	14.422939	CITY	MAJOR	CZE	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.st-petersburg	St Petersburg	59.94096	30.314074	CITY,PORT	GLOBAL	rus-northwest	curated-natural-earth-populated-places-5.1.2	IMPERIAL_CAPITAL
+place.moscow	Moscow	55.75411	37.613577	CITY	MAJOR	rus-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.sevastopol	Sevastopol	44.603925	33.524395	PORT	MAJOR	rus-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.odessa	Odessa	46.491962	30.708055	CITY,PORT	MAJOR	ukr-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.vladivostok	Vladivostok	43.130015	131.910026	PORT	MAJOR	rus-far-east	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.archangel	Archangel	64.574959	40.545008	PORT	SECONDARY	rus-northwest	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.rome	Rome	41.897902	12.481313	CITY	GLOBAL	ita-central	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.naples	Naples	40.841971	14.243066	CITY,PORT	MAJOR	ita-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.genoa	Genoa	44.409988	8.930039	CITY,PORT	MAJOR	ita-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.venice	Venice	45.438659	12.334999	CITY,PORT	SECONDARY	ita-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.taranto	Taranto	40.508392	17.229997	PORT	SECONDARY	ita-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.madrid	Madrid	40.401972	-3.685297	CITY	GLOBAL	esp-north	curated-natural-earth-populated-places-5.1.2	IMPERIAL_CAPITAL
+place.barcelona	Barcelona	41.385245	2.181424	CITY,PORT	MAJOR	esp-south-east	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.cadiz	Cadiz	36.524829	-6.286141	PORT	MAJOR	esp-centre-west	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.bilbao	Bilbao	43.249981	-2.929987	CITY,PORT	SECONDARY	esp-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.lisbon	Lisbon	38.724669	-9.146812	CITY,PORT	GLOBAL	prt-mainland	curated-natural-earth-populated-places-5.1.2	IMPERIAL_CAPITAL
+place.oporto	Oporto	41.151952	-8.621947	CITY,PORT	MAJOR	prt-mainland	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.amsterdam	Amsterdam	52.351914	4.914694	CITY,PORT	GLOBAL	nld-mainland	curated-natural-earth-populated-places-5.1.2	IMPERIAL_CAPITAL
+place.rotterdam	Rotterdam	51.921915	4.478028	PORT	MAJOR	nld-mainland	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.brussels	Brussels	50.835263	4.331371	CITY	GLOBAL	BEL	curated-natural-earth-populated-places-5.1.2	IMPERIAL_CAPITAL
+place.antwerp	Antwerp	51.222319	4.413071	CITY,PORT	MAJOR	BEL	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.copenhagen	Copenhagen	55.68051	12.56154	CITY,PORT	GLOBAL	DNK	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.stockholm	Stockholm	59.324127	18.0663	CITY,PORT	GLOBAL	swe-south	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.christiania	Christiania	59.918636	10.748033	CITY,PORT	MAJOR	nor-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.athens	Athens	37.985272	23.731375	CITY	GLOBAL	GRC	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.piraeus	Piraeus	37.950021	23.69999	PORT	MAJOR	GRC	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.constantinople	Constantinople	41.017602	28.974277	CITY,PORT	GLOBAL	tur-marmara-west	curated-natural-earth-populated-places-5.1.2	IMPERIAL_CAPITAL
+place.smyrna	Smyrna	38.438096	27.149848	CITY,PORT	MAJOR	tur-marmara-west	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.salonica	Salonica	40.698052	22.883055	CITY,PORT	MAJOR	GRC	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.bucharest	Bucharest	44.435318	26.098001	CITY	GLOBAL	rou-east-south	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.belgrade	Belgrade	44.820591	20.466045	CITY	GLOBAL	SRB	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.sofia	Sofia	42.685295	23.314708	CITY	GLOBAL	BGR	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.cetinje	Cetinje	42.3906	18.9142	CITY	SECONDARY	MNE	project-curated-1895	MINOR_CAPITAL
+place.sarajevo	Sarajevo	43.850022	18.383002	CITY	MAJOR	BIH	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.bern	Bern	46.916683	7.466976	CITY	GLOBAL	CHE	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.dublin	Dublin	53.346731	-6.25698	CITY,PORT	MAJOR	IRL	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.belfast	Belfast	54.594245	-5.928178	CITY,PORT	MAJOR	gbr-northern-ireland	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.reykjavik	Reykjavik	64.143459	-21.936546	CITY,PORT	GLOBAL	ISL	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.helsingfors	Helsingfors	60.163804	24.932457	CITY,PORT	MAJOR	FIN	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.washington	Washington	38.901495	-77.011364	CITY	GLOBAL	usa-south	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.new-york	New York	40.721562	-73.995718	CITY,PORT	MAJOR	usa-northeast	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.boston	Boston	42.331906	-71.07196	CITY,PORT	MAJOR	usa-northeast	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.philadelphia	Philadelphia	39.945942	-75.179841	CITY,PORT	MAJOR	usa-northeast	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.baltimore	Baltimore	39.281516	-76.614582	CITY,PORT	SECONDARY	usa-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.norfolk	Norfolk	36.8508	-76.2859	PORT	MAJOR	usa-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.new-orleans	New Orleans	29.968908	-90.088368	CITY,PORT	MAJOR	usa-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.charleston	Charleston	32.792377	-79.992105	PORT	SECONDARY	usa-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.san-francisco	San Francisco	37.784263	-122.3996	CITY,PORT	MAJOR	usa-pacific	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.seattle	Seattle	47.600423	-122.315322	CITY,PORT	SECONDARY	usa-pacific	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.los-angeles	Los Angeles	34.049219	-118.231986	CITY,PORT	SECONDARY	usa-pacific	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.chicago	Chicago	41.847961	-87.635237	CITY,PORT	MAJOR	usa-midwest	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.st-louis	St Louis	38.636964	-90.241926	CITY,PORT	SECONDARY	usa-midwest	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.denver	Denver	39.741134	-104.985962	CITY	SECONDARY	usa-interior-west	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.ottawa	Ottawa	45.418643	-75.701961	CITY	GLOBAL	can-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.montreal	Montreal	45.501945	-73.585243	CITY,PORT	MAJOR	can-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.quebec	Quebec	46.839969	-71.24561	CITY,PORT	MAJOR	can-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.halifax	Halifax	44.650025	-63.600004	CITY,PORT	MAJOR	can-atlantic	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.toronto	Toronto	43.664645	-79.389459	CITY,PORT	MAJOR	can-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.vancouver	Vancouver	49.275362	-123.12359	CITY,PORT	MAJOR	can-pacific	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.victoria	Victoria	48.433283	-123.350001	CITY,PORT	SECONDARY	can-pacific	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.winnipeg	Winnipeg	49.882987	-97.165992	CITY	SECONDARY	can-prairies-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.mexico-city	Mexico City	19.444388	-99.132934	CITY	GLOBAL	mex-central-south	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.veracruz	Veracruz	19.177342	-96.159981	CITY,PORT	MAJOR	mex-central-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.acapulco	Acapulco	16.849991	-99.915979	PORT	SECONDARY	mex-central-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.guatemala-city	Guatemala City	14.623081	-90.528911	CITY	GLOBAL	GTM	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.havana	Havana	23.133905	-82.366128	CITY,PORT	GLOBAL	CUB	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.san-juan	San Juan	18.440023	-66.129979	CITY,PORT	MAJOR	PRI	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.kingston	Kingston	17.977077	-76.767434	CITY,PORT	GLOBAL	JAM	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.port-au-prince	Port-au-Prince	18.54297	-72.33798	CITY,PORT	GLOBAL	HTI	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.santo-domingo	Santo Domingo	18.470745	-69.929742	CITY,PORT	GLOBAL	DOM	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.panama-city	Panama City	8.969963	-79.534983	CITY,PORT	MAJOR	PAN	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.colon	Colon	9.365021	-79.87498	PORT	MAJOR	PAN	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.caracas	Caracas	10.502944	-66.918983	CITY	GLOBAL	VEN	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.cartagena	Cartagena	10.401684	-75.516339	CITY,PORT	MAJOR	col-west	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.bogota	Bogota	4.598369	-74.08529	CITY	GLOBAL	col-west	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.quito	Quito	-0.213042	-78.501997	CITY	GLOBAL	ECU	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.guayaquil	Guayaquil	-2.218088	-79.921988	CITY,PORT	MAJOR	ECU	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.lima	Lima	-12.046067	-77.052008	CITY,PORT	GLOBAL	per-north-central	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.la-paz	La Paz	-16.496028	-68.151931	CITY	GLOBAL	BOL	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.santiago	Santiago	-33.440205	-70.650504	CITY	GLOBAL	chl-central-south	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.valparaiso	Valparaiso	-33.047739	-71.617026	CITY,PORT	MAJOR	chl-central-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.buenos-aires	Buenos Aires	-34.610715	-58.432513	CITY,PORT	GLOBAL	arg-pampas	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.montevideo	Montevideo	-34.905376	-56.186823	CITY,PORT	GLOBAL	URY	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.rio-de-janeiro	Rio de Janeiro	-22.907308	-43.212117	CITY,PORT	GLOBAL	bra-central-southeast	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.sao-paulo	Sao Paulo	-23.556734	-46.626966	CITY	MAJOR	bra-central-southeast	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.bahia	Bahia	-12.968026	-38.481933	CITY,PORT	MAJOR	bra-northeast	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.recife	Recife	-8.060532	-34.908766	CITY,PORT	MAJOR	bra-northeast	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.belem	Belem	-1.448057	-48.481969	CITY,PORT	MAJOR	bra-amazon	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.manaus	Manaus	-3.098086	-60.001963	CITY,PORT	SECONDARY	bra-amazon	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.asuncion	Asuncion	-25.290671	-57.625834	CITY,PORT	GLOBAL	PRY	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.cairo	Cairo	30.051906	31.248022	CITY	GLOBAL	egy-delta	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.alexandria	Alexandria	31.201965	29.94805	CITY,PORT	MAJOR	egy-delta	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.port-said	Port Said	31.25999	32.290008	PORT	MAJOR	egy-delta	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.khartoum	Khartoum	15.590024	32.532233	CITY	GLOBAL	sdn-nile-east	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.cape-town	Cape Town	-33.918065	18.433042	CITY,PORT	GLOBAL	zaf-cape	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.durban	Durban	-29.860662	31.010944	CITY,PORT	MAJOR	zaf-natal	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.pretoria	Pretoria	-25.704975	28.227483	CITY	GLOBAL	zaf-transvaal	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.bloemfontein	Bloemfontein	-29.119994	26.229913	CITY	GLOBAL	zaf-orange	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.lagos	Lagos	6.445208	3.389585	CITY,PORT	MAJOR	nga-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.kano	Kano	12.001923	8.518092	CITY	SECONDARY	nga-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.dakar	Dakar	14.717778	-17.475076	CITY,PORT	MAJOR	SEN	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.freetown	Freetown	8.471957	-13.236162	CITY,PORT	MAJOR	SLE	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.accra	Accra	5.55198	-0.218662	CITY,PORT	MAJOR	GHA	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.luanda	Luanda	-8.83634	13.232481	CITY,PORT	GLOBAL	ago-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.lobito	Lobito	-12.370009	13.54123	PORT	SECONDARY	ago-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.lourenco-marques	Lourenco Marques	-25.953332	32.587217	CITY,PORT	MAJOR	moz-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.beira	Beira	-19.820045	34.870006	PORT	SECONDARY	moz-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.zanzibar	Zanzibar	-6.16	39.200026	CITY,PORT	MAJOR	TZA	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.mombasa	Mombasa	-4.03808	39.687972	CITY,PORT	MAJOR	KEN	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.dar-es-salaam	Dar es Salaam	-6.798067	39.266396	CITY,PORT	MAJOR	TZA	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.addis-ababa	Addis Ababa	9.035256	38.698059	CITY	GLOBAL	eth-north-central	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.monrovia	Monrovia	6.314582	-10.79966	CITY,PORT	GLOBAL	LBR	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.tunis	Tunis	36.802778	10.179678	CITY,PORT	GLOBAL	TUN	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.algiers	Algiers	36.765011	3.048607	CITY,PORT	GLOBAL	dza-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.oran	Oran	35.711948	-0.621919	CITY,PORT	MAJOR	dza-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.fez	Fez	34.056545	-5.002323	CITY	GLOBAL	MAR	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.casablanca	Casablanca	33.601922	-7.618313	CITY,PORT	MAJOR	MAR	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.mogadishu	Mogadishu	2.068627	45.364732	CITY,PORT	MAJOR	SOM	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.djibouti	Djibouti	11.595014	43.148002	CITY,PORT	MAJOR	DJI	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.tananarive	Tananarive	-18.914691	47.514678	CITY	GLOBAL	MDG	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.leopoldville	Leopoldville	-4.327778	15.313026	CITY,PORT	SECONDARY	cod-west-basin	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.tehran	Tehran	35.673889	51.422398	CITY	GLOBAL	irn-north	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.tabriz	Tabriz	38.088237	46.2993	CITY	MAJOR	irn-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.isfahan	Isfahan	32.701951	51.698092	CITY	SECONDARY	irn-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.baghdad	Baghdad	33.340594	44.391923	CITY,PORT	MAJOR	IRQ	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.basra	Basra	30.51547	47.811611	CITY,PORT	MAJOR	IRQ	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.beirut	Beirut	33.873921	35.507762	CITY,PORT	MAJOR	LBN	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.damascus	Damascus	33.50198	36.29805	CITY	MAJOR	SYR	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.jerusalem	Jerusalem	31.778408	35.206626	CITY	MAJOR	ISR	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.jeddah	Jeddah	21.518835	39.217252	CITY,PORT	MAJOR	sau-hejaz	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.muscat	Muscat	23.585179	58.378311	CITY,PORT	GLOBAL	OMN	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.aden	Aden	12.779723	45.00949	CITY,PORT	MAJOR	YEM	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.kabul	Kabul	34.518636	69.181314	CITY	GLOBAL	afg-east	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.kandahar	Kandahar	31.61002	65.694946	CITY	SECONDARY	afg-west	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.calcutta	Calcutta	22.569579	88.369126	CITY,PORT	GLOBAL	ind-east	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.bombay	Bombay	19.068408	72.875839	CITY,PORT	MAJOR	ind-deccan	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.madras	Madras	13.091934	80.278053	CITY,PORT	MAJOR	ind-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.delhi	Delhi	28.671939	77.228058	CITY	MAJOR	ind-northwest	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.karachi	Karachi	24.871938	66.988063	CITY,PORT	MAJOR	pak-east	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.lahore	Lahore	31.561917	74.348079	CITY	MAJOR	pak-east	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.rangoon	Rangoon	16.7853	96.164732	CITY,PORT	GLOBAL	MMR	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.colombo	Colombo	6.931966	79.857751	CITY,PORT	GLOBAL	LKA	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.peking	Peking	39.90172	116.394201	CITY	GLOBAL	chn-north	curated-natural-earth-populated-places-5.1.2	IMPERIAL_CAPITAL
+place.shanghai	Shanghai	31.218398	121.434559	CITY,PORT	MAJOR	chn-east-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.tientsin	Tientsin	39.082772	117.196607	CITY,PORT	MAJOR	chn-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.canton	Canton	23.124723	113.261785	CITY,PORT	MAJOR	chn-south-coast	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.hankow	Hankow	30.581977	114.268071	CITY,PORT	MAJOR	chn-east-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.nanking	Nanking	32.051965	118.778029	CITY,PORT	SECONDARY	chn-east-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.chungking	Chungking	29.566923	106.593036	CITY,PORT	SECONDARY	chn-east-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.foochow	Foochow	26.081942	119.2981	CITY,PORT	SECONDARY	chn-east-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.port-arthur	Port Arthur	38.924784	121.627885	CITY,PORT	MAJOR	chn-manchuria	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.hong-kong	Hong Kong	22.306927	114.183064	CITY,PORT	GLOBAL	HKG	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.tokyo	Tokyo	35.686963	139.749462	CITY,PORT	GLOBAL	jpn-central	curated-natural-earth-populated-places-5.1.2	IMPERIAL_CAPITAL
+place.yokohama	Yokohama	35.430656	139.602021	CITY,PORT	MAJOR	jpn-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.osaka	Osaka	34.691095	135.503754	CITY,PORT	MAJOR	jpn-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.kobe	Kobe	34.679988	135.169982	CITY,PORT	MAJOR	jpn-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.nagasaki	Nagasaki	32.764988	129.885033	CITY,PORT	MAJOR	jpn-west-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.seoul	Seoul	37.568295	126.997785	CITY	GLOBAL	KOR	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.fusan	Fusan	35.096999	129.008102	CITY,PORT	MAJOR	KOR	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.bangkok	Bangkok	13.751945	100.514699	CITY,PORT	GLOBAL	tha-south	curated-natural-earth-populated-places-5.1.2	MAJOR_CAPITAL
+place.saigon	Saigon	10.762125	106.702985	CITY,PORT	MAJOR	vnm-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.hanoi	Hanoi	21.035273	105.848068	CITY	MAJOR	vnm-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.haiphong	Haiphong	20.831952	106.678147	CITY,PORT	MAJOR	vnm-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.batavia	Batavia	-6.172472	106.827492	CITY,PORT	GLOBAL	idn-java	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.surabaya	Surabaya	-7.24729	112.748887	CITY,PORT	MAJOR	idn-java	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.makassar	Makassar	-5.138013	119.430082	CITY,PORT	MAJOR	idn-sulawesi	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.medan	Medan	3.58192	98.648094	CITY,PORT	SECONDARY	idn-sumatra	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.manila	Manila	14.606105	120.980271	CITY,PORT	GLOBAL	phl-luzon	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.singapore	Singapore	1.294979	103.853875	CITY,PORT	GLOBAL	SGP	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.penang	Penang	5.413613	100.329368	CITY,PORT	MAJOR	mys-peninsula	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.sydney	Sydney	-33.871373	151.212548	CITY,PORT	GLOBAL	aus-southeast	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.melbourne	Melbourne	-37.818086	144.97307	CITY,PORT	MAJOR	aus-southeast	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.brisbane	Brisbane	-27.453085	153.033147	CITY,PORT	MAJOR	aus-queensland	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.perth	Perth	-31.953069	115.838053	CITY,PORT	MAJOR	aus-west-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.adelaide	Adelaide	-34.933042	138.598059	CITY,PORT	MAJOR	aus-west-central	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.wellington	Wellington	-41.292068	174.777201	CITY,PORT	GLOBAL	nzl-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.auckland	Auckland	-36.848055	174.763027	CITY,PORT	MAJOR	nzl-north	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.christchurch	Christchurch	-43.535022	172.630023	CITY,PORT	MAJOR	nzl-south	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.honolulu	Honolulu	21.303429	-157.858301	CITY,PORT	GLOBAL	hawaii	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.suva	Suva	-18.133016	178.441707	CITY,PORT	GLOBAL	FJI	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.noumea	Noumea	-22.262528	166.444285	CITY,PORT	MAJOR	NCL	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.apia	Apia	-13.835715	-171.768599	CITY,PORT	GLOBAL	WSM	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.tegucigalpa	Tegucigalpa	14.103991	-87.219475	CITY	GLOBAL	HND	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.san-salvador	San Salvador	13.70328	-89.215576	CITY	GLOBAL	SLV	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.managua	Managua	12.154962	-86.270437	CITY	GLOBAL	NIC	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.san-jose	San Jose	9.930371	-84.078814	CITY	GLOBAL	CRI	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.kathmandu	Kathmandu	27.718638	85.314696	CITY	GLOBAL	NPL	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.punakha	Punakha	27.5921	89.8797	CITY	GLOBAL	BTN	project-curated-1895	MINOR_CAPITAL
+place.luxembourg	Luxembourg	49.61166	6.130003	CITY	SECONDARY	LUX	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.vaduz	Vaduz	47.133724	9.51667	CITY	DETAIL	LIE	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.monaco	Monaco	43.739646	7.406913	CITY,PORT	DETAIL	MCO	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.san-marino	San Marino	43.936096	12.44177	CITY	DETAIL	SMR	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.andorra	Andorra la Vella	42.510753	1.526594	CITY	SECONDARY	AND	curated-natural-earth-populated-places-5.1.2	MINOR_CAPITAL
+place.nassau	Nassau	25.08339	-77.350044	CITY,PORT	MAJOR	BHS	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.bridgetown	Bridgetown	13.102003	-59.616527	CITY,PORT	MAJOR	BRB	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.port-of-spain	Port of Spain	10.651997	-61.517031	CITY,PORT	MAJOR	TTO	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.st-georges	St George's	12.052633	-61.741643	CITY,PORT	MAJOR	GRD	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.castries	Castries	14.007875	-60.992875	CITY,PORT	MAJOR	LCA	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.st-johns	St John's	17.118036	-61.850034	CITY,PORT	MAJOR	ATG	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.willemstad	Willemstad	12.11229	-68.872356	CITY,PORT	MAJOR	CUW	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.oranjestad	Oranjestad	12.521503	-70.025526	CITY,PORT	MAJOR	ABW	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.hamilton-bermuda	Hamilton	32.29419	-64.783937	CITY,PORT	MAJOR	BMU	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.george-town-cayman	George Town	19.294748	-81.37157	CITY,PORT	MAJOR	CYM	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.fort-de-france	Fort-de-France	14.610412	-61.080029	CITY,PORT	MAJOR	mtq	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.basse-terre	Basse-Terre	16.01041	-61.705484	CITY,PORT	MAJOR	glp	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.kingstown	Kingstown	13.155756	-61.220236	CITY,PORT	MAJOR	VCT	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.banjul	Bathurst	13.453876	-16.591701	CITY,PORT	MAJOR	GMB	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.conakry	Conakry	9.533469	-13.682181	CITY,PORT	MAJOR	GIN	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.lome	Lome	6.133883	1.220811	CITY,PORT	MAJOR	TGO	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.cotonou	Cotonou	6.36298	2.404355	CITY,PORT	MAJOR	BEN	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.douala	Douala	4.062356	9.708045	CITY,PORT	MAJOR	CMR	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.libreville	Libreville	0.385389	9.457965	CITY,PORT	MAJOR	GAB	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.walvis-bay	Walvis Bay	-22.957528	14.505306	PORT	MAJOR	NAM	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.port-louis	Port Louis	-20.166639	57.499994	CITY,PORT	MAJOR	MUS	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.victoria-seychelles	Victoria	-4.616632	55.44999	CITY,PORT	MAJOR	SYC	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.toamasina	Tamatave	-18.181798	49.404984	CITY,PORT	MAJOR	MDG	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.georgetown	Georgetown	6.801974	-58.167029	CITY,PORT	MAJOR	GUY	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.paramaribo	Paramaribo	5.83503	-55.167031	CITY,PORT	MAJOR	SUR	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.cayenne	Cayenne	4.932992	-52.330021	CITY,PORT	MAJOR	guf	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.male	Male	4.172037	73.508901	CITY,PORT	MAJOR	MDV	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.port-moresby	Port Moresby	-9.464708	147.192504	CITY,PORT	MAJOR	PNG	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.rabaul	Rabaul	-4.20549	152.143431	PORT	MAJOR	PNG	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.papeete	Papeete	-17.533363	-149.566669	CITY,PORT	MAJOR	PYF	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.pago-pago	Pago Pago	-14.276611	-170.706645	CITY,PORT	MAJOR	ASM	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.nukualofa	Nuku'alofa	-21.138512	-175.220564	CITY,PORT	MAJOR	TON	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.port-vila	Port Vila	-17.73335	168.316641	CITY,PORT	MAJOR	VUT	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.majuro	Majuro	7.103004	171.38	CITY,PORT	MAJOR	MHL	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.tarawa	Tarawa	1.338188	173.017571	CITY,PORT	MAJOR	KIR	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.valletta	Valletta	35.899732	14.514711	CITY,PORT	MAJOR	MLT	curated-natural-earth-populated-places-5.1.2	ORDINARY
+place.gibraltar	Gibraltar	36.128342	-5.346014	CITY,PORT	MAJOR	GIB	curated-natural-earth-populated-places-5.1.2	ORDINARY

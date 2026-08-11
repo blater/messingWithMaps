@@ -1,0 +1,13 @@
+asset: world_1880.geojson
+ownership: third-party reference geography
+source: https://github.com/aourednik/historical-basemaps
+represented_date: 1880
+licence: REVIEW REQUIRED before distribution; no project ownership is claimed
+transformations:
+  - supplied GeoJSON retained as the initial candidate geometry source
+  - consecutive duplicate points and immediate backtracking spikes removed offline for triangulation
+  - zero-area interior rings omitted from prepared fill geometry
+  - one non-playable Antarctica part crossing the flat-map seam omitted from prepared geometry
+  - projected with the flat longitude-to-X and latitude-to-Y projection
+  - eight reviewed gameplay regions mapped by source-feature fingerprint and polygon-part selection
+distribution_status: blocked until the upstream licence and derived-file terms are confirmed

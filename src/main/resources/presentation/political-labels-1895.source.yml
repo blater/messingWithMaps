@@ -1,0 +1,8 @@
+datasetId: drednort-political-labels-1895-v1
+representedDate: circa 1895
+purpose: prepared strategic-map anchors, minimum zoom bands, and orientation for playable political labels
+source: project-authored presentation data, reviewed against the strategic map
+licence: project data
+notes:
+  - this integration resource is neither political state nor geographic region data
+  - missing actors fall back to their capital anchor and the policy-derived minimum band

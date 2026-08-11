@@ -1,0 +1,35 @@
+# Sparse reference-map overrides for the catalogue-derived GRAND/THEATRE targets. Explicit crop
+# values locate unusually large multiline titles. Blank crop values retain the calibrated anchor
+# window while supplying historically printed reference wording. No row is an accepted baseline.
+labelKey	lineText	lineOrder	cropX	cropY	cropWidth	cropHeight	minimumCapHeight	maximumCapHeight	maximumMissingGlyphs	renderText	maximumInkLuminance
+water.north-atlantic	NORTH	0	6500	1200	2400	1400	20	85	2
+water.north-atlantic	ATLANTIC	1	6500	1200	2400	1400	20	85	2
+water.north-atlantic	OCEAN	2	6500	1200	2400	1400	20	85	2
+water.south-atlantic	SOUTH	0	7000	3500	2082	1300	20	82	2
+water.south-atlantic	ATLANTIC	1	7000	3500	2082	1300	20	82	2
+water.south-atlantic	OCEAN	2	7000	3500	2082	1300	20	82	2
+water.pacific-west	NORTH PACIFIC	0	3300	1500	2400	1500	20	82	2
+water.pacific-west	OCEAN	1	3300	1500	2400	1500	20	82	2
+water.pacific-east	SOUTH PACIFIC	0	3400	3700	2600	1200	20	82	2
+water.pacific-east	OCEAN	1	3400	3700	2600	1200	20	82	2
+water.indian	INDIAN	0	1300	2600	2200	1300	18	76	2
+water.indian	OCEAN	1	1300	2600	2200	1300	18	76	2
+water.arctic	ARCTIC OCEAN	0	2500	0	3500	1000	18	78	2
+water.south-china	CHINA	0	2388	2524	1100	750	8	52	2
+water.south-china	SEA	1	2388	2524	1100	750	8	52	2
+water.japan	SEA OF	0	2871	1823	1100	750	8	52	2
+water.japan	JAPAN	1	2871	1823	1100	750	8	52	2
+water.hudson-bay	HUDSON	0	6105	1135	1100	750	8	52	2
+water.hudson-bay	BAY	1	6105	1135	1100	750	8	52	2
+continent.south-america	SOUTH	0	6700	3250	1400	350	20	75	2
+continent.south-america	AMERICA	1	6700	3450	1400	400	15	65	2
+political.british-empire	BRITISH	0	7382	1211	1700	1000	12	80	2
+political.british-empire	ISLANDS	1	7382	1211	1700	1000	12	80	2	EMPIRE
+political.russian-empire	RUSSIAN	0	900	1100	3100	550	25	110	2		195
+political.russian-empire	EMPIRE	0	900	1100	3100	550	25	110	2		195
+political.qing-empire	CHINESE	0	2250	2100	1100	350	12	70	2		190
+political.qing-empire	EMPIRE	1	2300	2250	1100	350	12	70	2		190
+political.united-states	UNITED	0	5700	2100	1200	400	12	70	2		190
+political.united-states	STATES	1	5700	2100	1200	400	12	70	2		190
+political.spanish-empire	SPAIN	0	8350	2150	500	250	8	45	2		190
+political.japanese-empire	JAPAN	0	3350	2250	600	500	12	70	2		190

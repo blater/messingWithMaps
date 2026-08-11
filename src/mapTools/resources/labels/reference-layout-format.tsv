@@ -1,0 +1,8 @@
+# Reference-only authoring format. Coordinates address the supplied local scan and are never runtime data.
+# Calibration: axis<TAB>imagePixel<TAB>mapCoordinate
+# Observation: labelKey<TAB>typographyRole<TAB>capHeightPixels<TAB>trackingPixels<TAB>imagePath
+# imagePath is one or more x,y coordinates separated by semicolons; use more than two to retain a curve.
+# `ReferenceLabelReviewSheetBuilder <reference-image> <observations.tsv> <output.svg>` overlays
+# those paths on a local linked scan for human review. Write its SVG to a temporary directory.
+# `PreparedLabelGlyphAssetBuilder <lines.tsv> <serif.ttf> <italic.ttf> <output.tsv>` turns
+# reviewed canonical baselines into fixed per-glyph origins and rotations for runtime rendering.

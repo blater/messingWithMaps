@@ -1,0 +1,19 @@
+dataset: Drednort curated strategic map features
+represented_date: approximate late nineteenth century naming
+licence: project data; coordinate seeds from public-domain Natural Earth
+sources:
+  natural_earth_physical:
+    version: 5.1.x
+    terms: https://www.naturalearthdata.com/about/terms-of-use/
+  natural_earth_populated_places:
+    version: 5.1.2
+    terms: https://www.naturalearthdata.com/about/terms-of-use/
+transformations:
+  - select maritime and island features relevant to naval strategy
+  - author latitude-first label anchors for the flat projection
+  - curate names and semantic ranks for late-nineteenth-century presentation
+  - curate cities and ports separately from political control
+  - retain stable place IDs when replacing a modern display name with its 1880-95 form
+  - exclude settlements founded after the represented period and ports whose strategic role
+    was established after it
+confidence: approximate anchors and names are reviewed for gameplay readability, not survey use

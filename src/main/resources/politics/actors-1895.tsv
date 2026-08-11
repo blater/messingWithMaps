@@ -1,0 +1,60 @@
+actorId	displayName	kind	capitalRegionId	playable	mapColourId
+british-empire	The British Empire	EMPIRE	gbr-england-wales	true	color_britain
+french-empire	The French Republic	COUNTRY	fra-north	true	color_france
+german-empire	The German Empire	EMPIRE	deu-northeast	true	color_germany
+russian-empire	The Russian Empire	EMPIRE	rus-northwest	true	color_russia
+austria-hungary	The Austro-Hungarian Empire	EMPIRE	AUT	true	color_austria
+ottoman-empire	Ottoman Empire	EMPIRE	tur-marmara-west	false	color_ottoman
+italian-empire	The Kingdom of Italy	COUNTRY	ita-central	true	color_italy
+spanish-empire	The Spanish Empire	EMPIRE	esp-north	true	color_spain
+portuguese-empire	Portugal	EMPIRE	prt-mainland	false	color_default1
+dutch-empire	Netherlands	EMPIRE	nld-mainland	false	color_default2
+belgian-empire	Belgium	EMPIRE	BEL	false	color_default3
+qing-empire	Qing Dynasty	EMPIRE	chn-north	true	color_china
+japanese-empire	Empire of Japan	EMPIRE	jpn-central	true	color_japan
+denmark	Denmark	COUNTRY	DNK	false	color_default1
+sweden-norway	Sweden-Norway	COUNTRY	swe-south	false	color_default2
+greece	Greece	COUNTRY	GRC	false	color_default1
+romania	Romania	COUNTRY	rou-east-south	false	color_default2
+serbia	Serbia	COUNTRY	SRB	false	color_default3
+bulgaria	Bulgaria	COUNTRY	BGR	false	color_default4
+montenegro	Montenegro	COUNTRY	MNE	false	color_default4
+switzerland	Switzerland	COUNTRY	CHE	false	color_default1
+luxembourg	Luxembourg	COUNTRY	LUX	false	color_default2
+liechtenstein	Liechtenstein	COUNTRY	LIE	false	color_default3
+monaco	Monaco	COUNTRY	MCO	false	color_default4
+san-marino	San Marino	COUNTRY	SMR	false	color_default1
+andorra	Andorra	COUNTRY	AND	false	color_default2
+united-states	The United States of America	COUNTRY	usa-south	true	color_usa
+mexico	Mexico	COUNTRY	mex-central-south	false	color_default1
+guatemala	Guatemala	COUNTRY	GTM	false	color_default2
+honduras	Honduras	COUNTRY	HND	false	color_default3
+el-salvador	El Salvador	COUNTRY	SLV	false	color_default4
+nicaragua	Nicaragua	COUNTRY	NIC	false	color_default1
+costa-rica	Costa Rica	COUNTRY	CRI	false	color_default2
+colombia	Colombia	COUNTRY	col-west	false	color_default3
+venezuela	Venezuela	COUNTRY	VEN	false	color_default4
+ecuador	Ecuador	COUNTRY	ECU	false	color_default1
+peru	Peru	COUNTRY	per-north-central	false	color_default2
+bolivia	Bolivia	COUNTRY	BOL	false	color_default3
+chile	Chile	COUNTRY	chl-central-south	false	color_default4
+argentina	Argentina	COUNTRY	arg-pampas	false	color_default1
+brazil	Brazil	COUNTRY	bra-central-southeast	false	color_default2
+paraguay	Paraguay	COUNTRY	PRY	false	color_default3
+uruguay	Uruguay	COUNTRY	URY	false	color_default4
+haiti	Haiti	COUNTRY	HTI	false	color_default1
+dominican-republic	Dominican Republic	COUNTRY	DOM	false	color_default2
+ethiopia	Ethiopia	COUNTRY	eth-north-central	false	color_default1
+liberia	Liberia	COUNTRY	LBR	false	color_default2
+morocco	Morocco	COUNTRY	MAR	false	color_default3
+egypt	Egypt	COUNTRY	egy-delta	false	color_default4
+orange-free-state	Orange Free State	COUNTRY	zaf-orange	false	color_default1
+transvaal	Transvaal	COUNTRY	zaf-transvaal	false	color_default2
+persia	Persia	COUNTRY	irn-north	false	color_default3
+afghanistan	Afghanistan	COUNTRY	afg-east	false	color_default4
+korea	Korea	COUNTRY	KOR	false	color_default1
+siam	Siam	COUNTRY	tha-south	false	color_default2
+oman	Oman	COUNTRY	OMN	false	color_default3
+nepal	Nepal	COUNTRY	NPL	false	color_default4
+bhutan	Bhutan	COUNTRY	BTN	false	color_default1
+hawaii	Hawaiian Kingdom	COUNTRY	hawaii	false	color_default2

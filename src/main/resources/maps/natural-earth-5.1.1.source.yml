@@ -1,0 +1,27 @@
+dataset: Natural Earth 5.1.1
+represented_date: modern; source publication version 5.1.1
+licence: public domain
+terms: https://www.naturalearthdata.com/about/terms-of-use/
+admin0:
+  source: https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.1/geojson/ne_10m_admin_0_countries.geojson
+  sha256: 239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255
+admin1:
+  source: https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.1/geojson/ne_10m_admin_1_states_provinces.geojson
+  sha256: 22d0e3ad85eb3e27f17cabf8ba2d50e554fbc27a87796ff891d958185da62fb5
+prepared_source:
+  path: src/mapTools/resources/maps/natural-earth-strategic-regions.geojson
+  sha256: d3a18cb6db6247967465d6a6ab8612f7d9843e56c7ea9049afdadee855399129
+  grouping: src/mapTools/resources/maps/world-region-groups.tsv
+transformations:
+  - use Admin-0 geometry for countries left whole by the region policy
+  - group selected Admin-1 units into explicitly authored strategic regions
+  - dissolve obsolete Admin-1 borders inside each strategic region during asset generation
+  - keep strategically important overseas territories separate from European homelands
+  - omit Antarctica from the playable map
+  - exclude modern leases, buffer zones, disputed tracts, and special areas that were not
+    separately playable regions in 1880-95 (BRT, CNM, CSI, CYN, ESB, IOA, IOT, KAB, KAS,
+    SPI, UMI, USG, WSB)
+  - replace the modern Hong Kong S.A.R. display name with Hong Kong
+  - project longitude/latitude coordinates using latitude-first projection calls
+  - preserve source geometry detail; measured rendering does not currently justify simplification
+political_interpretation: none; historical control is separate campaign data

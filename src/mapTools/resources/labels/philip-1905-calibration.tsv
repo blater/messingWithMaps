@@ -1,0 +1,46 @@
+# George Philip Commercial Chart, World (0724009.jpg), reference-only calibration.
+# X controls are read from the printed lower graticule: Greenwich at x=314 and 15-degree intervals.
+# Y controls use the map's Mercator graticule, with the Equator at y=3200 and the Arctic Circle
+# agreeing with the printed line at approximately y=1130. X remains unwrapped so the raster seam
+# can be converted into horizontal world copies by the renderer.
+axis	imagePixel	mapCoordinate
+X	314	0
+X	666	15
+X	1011	30
+X	1356	45
+X	1697	60
+X	2044	75
+X	2387	90
+X	2732	105
+X	3076	120
+X	3421	135
+X	3765	150
+X	4109	165
+X	4453	180
+X	4797	195
+X	5141	210
+X	5485	225
+X	5829	240
+X	6173	255
+X	6517	270
+X	6861	285
+X	7205	300
+X	7549	315
+X	7893	330
+X	8237	345
+X	8581	360
+Y	0	80
+Y	920	70
+Y	1470	60
+Y	1872	50
+Y	2198	40
+Y	2478	30
+Y	2732	20
+Y	2970	10
+Y	3200	0
+Y	3430	-10
+Y	3668	-20
+Y	3922	-30
+Y	4202	-40
+Y	4528	-50
+Y	4930	-60

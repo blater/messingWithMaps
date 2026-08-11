@@ -1,0 +1,24 @@
+dataset: Drednort approximate political presentation snapshot
+represented_date: circa 1895
+licence: project-authored data
+purpose: initial map colours, country/empire labels, and tooltip context
+confidence: broad strategic approximation; not authoritative for local disputes or transition dates
+references:
+  - https://guides.loc.gov/polish-collections/maps
+  - https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-partitions-of-poland-1772-1795
+  - https://tile.loc.gov/storage-services/service/gdc/gdclccn/a2/20/00/89/8/a22000898/a22000898.pdf
+  - https://encyclopedia.1914-1918-online.net/article/the-paris-peace-conference-and-its-consequences-1-1/
+  - https://groong.org/treaties/berlin.html
+transformations:
+  - mark the ten user-selected playable actors explicitly; playability controls map-label precedence but does not change geography or control
+  - select named presentation colours for the eleven principal actors; other actors select one of four neutral colour references and dependencies inherit their suzerain's colour
+  - assign each represented strategic region at most one displayed controller
+  - group colonial possessions under their controlling empire
+  - represent the late-nineteenth-century German, Russian, and Austro-Hungarian partitions of modern Poland using whole Natural Earth Admin-1 source units
+  - assign the mixed modern Silesian and Kuyavian-Pomeranian source units to the German Empire as a coarse strategic approximation
+  - separate East Prussia around Königsberg and Alsace-Lorraine from their modern-country groupings
+  - represent Bulgaria as an autonomous local controller under Ottoman suzerainty, following Article I of the 1878 Treaty of Berlin
+  - preserve neutral geography and stable region IDs
+  - omit claims, contested control, influence, diplomacy, and campaign rules
+known_limitations:
+  - northern Schleswig, Eupen-Malmedy, and Memel remain inside modern-country regions because their 1895 boundaries do not align cleanly with the available Natural Earth Admin-1 polygons
